@@ -1,7 +1,7 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Overlay = styled.div`
-    position:fixed;
+    position: fixed;
     top: 0;
     right: 0;
     left: 0;
@@ -11,7 +11,7 @@ export const Overlay = styled.div`
     justify-content: center;
     align-items: center;
     width: 100%;
-    height 100%;
+    height: 100%;
 
     background-color: rgba(78, 89, 131, 0.5);
     backdrop-filter: blur(5px);
@@ -23,7 +23,7 @@ export const Dialog = styled.div`
     flex-direction: column;
     justify-content: space-between;
     max-height: calc(100% - 144px);
-    widht: 500px;
+    width: 500px;
     padding: 24px;
     background-color: #ffffff;
     box-shadow: 0px 0px 32px rgba(78, 89, 131, 0.2);

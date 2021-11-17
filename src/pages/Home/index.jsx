@@ -1,7 +1,7 @@
 /* eslint-disable camelcase */
 import React, { useState } from 'react';
 
-import Slider from 'react-slick';
+//import Slider from 'react-slick';
 
 import TextField, { Input } from '@material/react-text-field';
 import MaterialIcon from '@material/react-material-icon';
@@ -9,12 +9,12 @@ import MaterialIcon from '@material/react-material-icon';
 //import Text from '../../components';
 import logo from '../../assets/logo.svg';
 import restaurante from '../../assets/restaurante-fake.png';
-import {Card, RestaurantCard} from '../../components';
+import {Card, RestaurantCard, Modal} from '../../components';
 import { Container, Carousel, Search, Logo,  Wrapper, Map, CarouselTitle} from './styles';
 
 const Home = () => {
   const [inputValue, setInputValue] = useState('');
-  
+  const [modalOpened, setModalOpened] = useState(false);
   const settings = {
     dots: false,
     infinite: true,
@@ -45,11 +45,13 @@ const Home = () => {
                <Card photo={ restaurante } title ="nome ?"/>
                <Card photo={ restaurante } title ="nome ?"/>
                <Card photo={ restaurante } title ="nome ?"/>
-            </Carousel>        
+            </Carousel>   
+            <button onClick={() => setModalOpened(true)}>Abrir modal</button>     
         </Search>  
         <RestaurantCard />      
       </Container>
       <Map />
+      <Modal open={modalOpened} onClose={() => setModalOpened(!modalOpened)} />
     </Wrapper>
   );
 };
